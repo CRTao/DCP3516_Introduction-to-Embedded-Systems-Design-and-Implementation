@@ -1,0 +1,26 @@
+import RPi.GPIO as GPIO
+import time
+import Adafruit_ADXL345
+import math
+
+LED_pin = 12
+GPIO.setmode(GPIO.BOARD)
+
+
+accel = Adafruit_ADXL345.ADXL345()
+try:
+    while True:
+	x = el.read()
+	x = x*0.061/1000
+	y = y*0.061/1000
+	z = z*0.061/1000
+	Ga = math.sqrt(x*x+y*y+z*z)
+        print(Ga)
+	time.sleep(0.5)
+except KeyboardInterrupt:
+    print "Exception: KeyboardInterrput"
+
+finally:
+    GPIO.cleanup()
+
+

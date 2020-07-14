@@ -1,0 +1,5 @@
+sudo ./advertise-url -u http://nctu.0516320
+sudo ./advertise-url -s
+
+sudo ./start.sh
+sudo ./stop.sh
